@@ -5,5 +5,4 @@ wooden(X) :- floats(X).
 floats(X) :- sameweight(duck, X). 
 
 female(girl).                 
-sameweight(duck,girl). 
-? witch(girl). 
+sameweight(duck,girl).

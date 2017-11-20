@@ -8,8 +8,7 @@ mensaje :- nl,write('Ejemplo "Juego Lógico" cargado.'),nl,
 iniciar :- write('Base de Conocimientos: '), 
            read(BC), 
            consult(BC),!, 
-           nl,write('Base de Conocimientos '),write
-(BC), 
+           nl,write('Base de Conocimientos'),write(BC), 
            write(' consultada'),nl,nl, 
            numeroPropiedades(N), 
            objetosUniverso(M), 
@@ -144,11 +143,9 @@ r1(Profesor,Asignatura) :- prof(Profesor), Profesor
                            asig(Asignatura). 
 /* r2(Profesor,Dia) <- Profesor imparte sus clases el Dia de la semana */ 
 r2(faraon,Dia) :- dia(Dia), Dia\=lunes. 
-r2(Profesor,Dia) :- prof(Profesor), Profesor\=farao
-n, dia(Dia). 
+r2(Profesor,Dia) :- prof(Profesor), Profesor\=faraon, dia(Dia). 
 
 /* r3(Asignatura,Dia) <- Asignatura se imparte el Dia de la semana */ 
 r3(logica,Dia) :- dia(Dia), Dia\=lunes, Dia\=jueves. 
 r3(programacion,Dia) :- dia(Dia), Dia\=lunes. 
-r3(Asignatura,Dia) :- asig(Asignatura), Asignatura\-logica, 
-                      Asignatura\=programacion, dia(Dia).
+r3(Asignatura,Dia) :- asig(Asignatura), Asignatura\=logica, Asignatura\=programacion, dia(Dia).
